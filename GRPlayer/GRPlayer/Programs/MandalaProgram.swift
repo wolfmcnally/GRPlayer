@@ -6,7 +6,7 @@ class MandalaProgram: Program {
 
     override func setup() {
         framesPerSecond = 20
-        canvas.clearColor = .clear
+        canvas.clearColor = nil
         i = -1
     }
 

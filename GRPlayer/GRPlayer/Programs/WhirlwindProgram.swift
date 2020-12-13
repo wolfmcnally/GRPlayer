@@ -17,7 +17,7 @@ class WhirlwindProgram: Program {
 
     override func setup() {
         framesPerSecond = 60
-        canvasSize = Size(width: 100, height: 150)
+        canvasSize = Size(width: 320, height: 200)
         backgroundCanvas.clearColor = .clear
         center = canvas.bounds.midXmidY
         for _ in 0 ..< particlesCount {
