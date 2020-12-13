@@ -1,4 +1,4 @@
-# GR
+# GRPlayer
 
 An app for presenting programs written using [GR](https://github.com/wolfmcnally/GR).
 
