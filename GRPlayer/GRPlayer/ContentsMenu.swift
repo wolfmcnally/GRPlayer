@@ -8,6 +8,16 @@
 import SwiftUI
 import GR
 
+struct LazyView<Content: View>: View {
+    let build: () -> Content
+    init(_ build: @autoclosure @escaping () -> Content) {
+        self.build = build
+    }
+    var body: Content {
+        build()
+    }
+}
+
 struct ContentsMenu: View {
     var body: some View {
         List(numberedContents, children: \.subItems) { row in
@@ -35,9 +45,11 @@ struct ContentsMenu: View {
 
     func programRow(_ programType: Program.Type) -> some View {
         NavigationLink(
-            destination: ProgramView(programType) {
-                ProgramHeader(programType: programType)
-            }
+            destination: LazyView(
+                ProgramDisplay(programType) {
+                    ProgramHeader(programType: programType)
+                }
+            )
             .navigationBarTitle(programType.title)
         ) {
             ProgramInfo(programType: programType)

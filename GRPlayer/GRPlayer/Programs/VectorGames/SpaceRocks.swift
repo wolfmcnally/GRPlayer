@@ -15,7 +15,7 @@ class SpaceRocks : Program {
 
         for _ in 0..<20 {
             let position = canvas.bounds.randomPoint()
-            let rotation = Double.random(in: 0 ..< 360°)
+            let rotation = Angle.random()
             let index = Int.random(in: 0..<4)
             let heft = Rock.Heft.allCases.randomChoice()
             rocks.append(Rock(position: position, rotation: rotation, index: index, heft: heft))
@@ -57,9 +57,9 @@ class Sprite {
     var speed: Vector
     let pathShapes: [PathShape]
     var scale: Double
-    var rotation: Double
+    var rotation: Angle
 
-    init(position: Point, speed: Vector, rotation: Double, scale: Double, pathShapes: [PathShape]) {
+    init(position: Point, speed: Vector, rotation: Angle, scale: Double, pathShapes: [PathShape]) {
         self.position = position
         self.speed = speed
         self.rotation = rotation
@@ -111,7 +111,7 @@ class Rock: Sprite {
         return [randomAxialSpeed(), randomAxialSpeed()]
     }
 
-    init(position: Point, rotation: Double, index: Int, heft: Heft) {
+    init(position: Point, rotation: Angle, index: Int, heft: Heft) {
         self.heft = heft
         let path = Self.allRocks[index]
         let scale = heft.scale
@@ -146,7 +146,7 @@ class Rock: Sprite {
 class Saucer: Sprite {
     init(position: Point = .zero) {
         let shape = PathShape(path: Self.saucer, color: .green)
-        super.init(position: position, speed: [4, 0], rotation: 0, scale: 0.5, pathShapes: [shape])
+        super.init(position: position, speed: [4, 0], rotation: .zero, scale: 0.5, pathShapes: [shape])
     }
 
     static let saucer: Path = [
@@ -158,7 +158,7 @@ class Saucer: Sprite {
 }
 
 class Player: Sprite {
-    init(position: Point = .zero, rotation: Double = 0) {
+    init(position: Point = .zero, rotation: Angle = .zero) {
         let pathShapes: [PathShape] = [
             .init(path: Self.player, color: .white),
             .init(path: Self.playerJet, color: .red)

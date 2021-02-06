@@ -39,6 +39,7 @@
 		7972C27025C3E50D009F9C20 /* DotsAndLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A3D425612B7B00FC3E17 /* DotsAndLines.swift */; };
 		7972C27125C3E50D009F9C20 /* DancingLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDFB6F2574C0E400F13953 /* DancingLines.swift */; };
 		7972C28A25C3FB7B009F9C20 /* ProgramHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */; };
+		79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		7972C22625C398AB009F9C20 /* ProgramInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramInfo.swift; sourceTree = "<group>"; };
 		7972C24025C3DBB5009F9C20 /* ContentsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsMenu.swift; sourceTree = "<group>"; };
 		7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramHeader.swift; sourceTree = "<group>"; };
+		79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				7972C27A25C3EC72009F9C20 /* GettingStarted */,
 				7972C27C25C3ECA2009F9C20 /* BasicAnimation */,
 				7972C27D25C3ECB5009F9C20 /* ShapesAndSprites */,
+				79BAE6D925CA0EFC0048C6CA /* Interaction */,
 				7972C27E25C3ECC1009F9C20 /* Grids */,
 				7972C28025C3ECE7009F9C20 /* Toys */,
 				7972C28225C3ECFC009F9C20 /* Dazzlers */,
@@ -246,6 +249,14 @@
 			path = VectorGames;
 			sourceTree = "<group>";
 		};
+		79BAE6D925CA0EFC0048C6CA /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,6 +337,7 @@
 				7972C26E25C3E50D009F9C20 /* HelloPixel.swift in Sources */,
 				7972C26025C3E50D009F9C20 /* EmptyProgram.swift in Sources */,
 				7972C27025C3E50D009F9C20 /* DotsAndLines.swift in Sources */,
+				79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */,
 				7972C26825C3E50D009F9C20 /* Whirlwind.swift in Sources */,
 				7972C26A25C3E50D009F9C20 /* HelloVector.swift in Sources */,
 				7972C25D25C3E50D009F9C20 /* Chessboard.swift in Sources */,

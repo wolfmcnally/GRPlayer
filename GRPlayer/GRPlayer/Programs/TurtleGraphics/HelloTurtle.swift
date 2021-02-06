@@ -2,7 +2,7 @@ import GR
 
 class HelloTurtle : Program {
     var turtle: Turtle!
-    var startAngle: Double = 0
+    var startAngle: Angle = .zero
 
     override func setup() {
         canvasSize = .init(width: 1920, height: 1080)
@@ -36,11 +36,11 @@ class HelloTurtle : Program {
 final class Turtle {
     let canvas: Canvas
     var position: Point
-    var angle: Double // radians
+    var angle: Angle
     var penColor: Color = .white
     var isPenDown: Bool = true
 
-    init(canvas: Canvas, angle: Double = 0) {
+    init(canvas: Canvas, angle: Angle = .zero) {
         self.canvas = canvas
         self.position = canvas.bounds.midXmidY.snapped
         self.angle = angle
@@ -52,7 +52,7 @@ final class Turtle {
         canvas.drawLine(from: oldPosition, to: position, color: penColor, lineCap: .round)
     }
 
-    func right(_ angle: Double) {
+    func right(_ angle: Angle) {
         self.angle += angle
     }
 }

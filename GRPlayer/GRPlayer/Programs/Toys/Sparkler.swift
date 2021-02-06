@@ -65,13 +65,16 @@ class Sparkler: Program {
         }
     }
 
-    override func touchBegan(at point: Point) {
-        genPosition = canvas.bounds.clampPoint(point)
-        genHue = Double.randomFrac()
-    }
-
-    override func touchMoved(at point: Point) {
-        genPosition = canvas.bounds.clampPoint(point)
+    override func onEvent(event: Event) {
+        switch event {
+        case .touchBegan(let point):
+            genPosition = canvas.bounds.clampPoint(point)
+            genHue = Double.randomFrac()
+        case .touchMoved(let point):
+            genPosition = canvas.bounds.clampPoint(point)
+        default:
+            break
+        }
     }
 
     private func makeSpark() -> Spark {

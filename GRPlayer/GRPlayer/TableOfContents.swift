@@ -42,8 +42,7 @@ struct ContentsItem: Identifiable {
 }
 
 let contents: [ContentsItem] = [
-    .init("Getting Started",
-          [
+    .init("Getting Started", [
             .init(EmptyProgram.self),
             .init(HelloPixel.self),
             .init(HelloCorners.self),
@@ -52,48 +51,42 @@ let contents: [ContentsItem] = [
     ]),
     .init("Understanding Coordinates"),
     .init("Understanding Color"),
-    .init("Basic Animation",
-          [
+    .init("Basic Animation", [
             .init(Pebbles.self),
             .init(Gravel.self),
             .init(HelloMovement.self),
             .init(BouncingBalls.self),
     ]),
-    .init("Shapes and Sprites",
-          [
+    .init("Shapes and Sprites", [
             .init(Mushrooms.self),
             .init(RainingHearts.self),
     ]),
-    .init("User Interaction"),
-    .init("Grids",
-          [
+    .init("User Interaction", [
+            .init(HelloPlayer.self),
+    ]),
+    .init("Grids", [
             .init(Chessboard.self),
     ]),
-    .init("Toys",
-          [
+    .init("Toys", [
             .init(TheDrip.self),
             .init(Sparkler.self),
     ]),
     .init("Sound Effects"),
-    .init("Dazzlers",
-          [
+    .init("Dazzlers", [
             .init(Mandala.self),
             .init(Whirlwind.self),
     ]),
-    .init("Vector Graphics",
-          [
+    .init("Vector Graphics", [
             .init(HelloVector.self),
             .init(HelloPath.self),
             .init(Stix.self),
             .init(MoreStix.self),
             .init(DancingLines.self),
     ]),
-    .init("Turtle Graphics",
-          [
+    .init("Turtle Graphics", [
             .init(HelloTurtle.self),
     ]),
-    .init("Vector Games",
-          [
+    .init("Vector Games", [
             .init(SpaceRocks.self),
     ]),
 ]
