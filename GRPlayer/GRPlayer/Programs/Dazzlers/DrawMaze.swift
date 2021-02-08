@@ -19,7 +19,7 @@ class DrawMaze: Program {
         let height = Int.random(in: 17...50) * 2 + 1
         canvasSize = [width, height]
         mazeMaker = MazeMaker(size: IntSize(width: (canvas.bounds.width - 1) / 2, height: (canvas.bounds.height - 1) / 2))
-        canvas.clearToColor(Color.random())
+        canvas.clear(to: Color.random())
         canvas.clearColor = nil
         pauseTimer = nil
     }

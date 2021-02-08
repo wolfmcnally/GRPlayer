@@ -34,7 +34,7 @@ class TheDrip: Program {
         //canvasSize = Size(width: 200, height: 200)
         //canvasSize = Size(width: 20, height: 100)
         backgroundCanvas.clearColor = nil
-        backgroundCanvas.clearToColor(.black)
+        backgroundCanvas.clear(to: .black)
         drips.removeAll()
 
         drawBasin()

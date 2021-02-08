@@ -12,6 +12,8 @@ class RandomWalk: Program {
     
     override func setup() {
         framesPerSecond = 30
+        position = nil
+        canvas.clear(to: .black)
         canvas.clearColor = nil
     }
     
