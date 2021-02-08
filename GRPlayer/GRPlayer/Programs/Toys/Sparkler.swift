@@ -5,7 +5,7 @@ class Sparkler: Program {
     let numSparks = 400
     let gravity = 0.05
     var frame = 0;
-    var genPosition = Point.zero
+    var genPosition = IntPoint.zero
     var genHue: Frac = 0
 
     struct Spark {
@@ -20,7 +20,7 @@ class Sparkler: Program {
     var sparks = [Spark]()
 
     override func setup() {
-        canvasSize = Size(width: 150, height: 250)
+        canvasSize = [150, 250]
         framesPerSecond = 60
         backgroundCanvas.clearColor = .black
         for _ in 0 ..< numSparks {
@@ -43,9 +43,9 @@ class Sparkler: Program {
     }
 
     override func draw() {
-        let bounds = canvas.bounds.intView
+        let bounds = canvas.bounds
         for spark in sparks {
-            let p = spark.position
+            let p = IntPoint(spark.position)
             guard bounds.isValidPoint(p) else { continue }
 
             let percentLived = (Double(spark.bornFrame) .<. Double(spark.dieFrame))(Double(frame))
@@ -68,10 +68,10 @@ class Sparkler: Program {
     override func onEvent(event: Event) {
         switch event {
         case .touchBegan(let point):
-            genPosition = canvas.bounds.clampPoint(point)
+            genPosition = canvas.bounds.clampPoint(IntPoint(point))
             genHue = Double.randomFrac()
         case .touchMoved(let point):
-            genPosition = canvas.bounds.clampPoint(point)
+            genPosition = canvas.bounds.clampPoint(IntPoint(point))
         default:
             break
         }
@@ -82,7 +82,7 @@ class Sparkler: Program {
         let bornFrame = frame
         let dieFrame = bornFrame + framesToLive
 
-        let position = genPosition
+        let position = Point(genPosition)
         let angle = Double.random(in: 0.0 ... Double.pi * 2)
         let speed = Double.random(in: 0.5 ... 2.0)
         let direction = Vector(angle: angle, magnitude: speed)

@@ -10,11 +10,11 @@ import GR
 
 struct ContentView: View {
     var body: some View {
-//        ProgramView(HelloPlayer())
-        NavigationView {
-            ContentsMenu()
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+        ProgramView(DrawMaze())
+//        NavigationView {
+//            ContentsMenu()
+//        }
+//        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

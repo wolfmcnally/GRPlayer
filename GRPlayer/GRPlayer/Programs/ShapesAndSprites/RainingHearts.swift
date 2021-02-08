@@ -9,7 +9,7 @@ class RainingHearts: Program {
     var hearts = [MySprite]()
 
     override func setup() {
-        canvasSize = Size(width: 200, height: 200)
+        canvasSize = [200, 200]
         framesPerSecond = 30
 
         for _ in 0 ..< heartsCount {
@@ -17,7 +17,7 @@ class RainingHearts: Program {
             let shape = allShapes[index]
             let sprite = MySprite(shape: shape)
 
-            sprite.position = canvas.bounds.intView.randomPoint()
+            sprite.floatPosition = Rect(canvas.bounds).randomPoint()
 
             var dirX = Double(index).interpolate(from: (0, Double(allShapes.count) - 1), to: (minSpeed, maxSpeed))
             dirX += Double.random(in: 0 ... 2)
@@ -53,7 +53,8 @@ class RainingHearts: Program {
 
     override func update() {
         for heart in hearts {
-            heart.position += heart.direction
+            heart.floatPosition += heart.direction
+            heart.position = IntPoint(heart.floatPosition)
         }
     }
 
@@ -65,6 +66,7 @@ class RainingHearts: Program {
 
     class MySprite: SimpleSprite {
         var direction: Vector = .zero
+        var floatPosition: Point = .zero
         var z: Double = 0
 
         init(shape: Shape) {
@@ -73,7 +75,7 @@ class RainingHearts: Program {
     }
 
     let smallHeart = Shape(
-        offset: Vector(dx: 2, dy: 1).intView,
+        offset: IntVector(dx: 2, dy: 1),
         rows: [
             "❔❤️❔❤️❔",
             "❤️❤️❤️❤️❤️",
@@ -83,7 +85,7 @@ class RainingHearts: Program {
     )
 
     let mediumHeart = Shape(
-        offset: Vector(dx: 4, dy: 3).intView,
+        offset: IntVector(dx: 4, dy: 3),
         rows: [
             "❔❤️❤️❔❔❔❤️❤️❔",
             "❤️❤️❤️❤️❔❤️❤️❤️❤️",
@@ -96,7 +98,7 @@ class RainingHearts: Program {
     )
 
     let largeHeart = Shape(
-        offset: Vector(dx: 6, dy: 4).intView,
+        offset: IntVector(dx: 6, dy: 4),
         rows: [
             "❔❔❤️❤️❤️❔❔❔❤️❤️❤️❔❔",
             "❔❤️❤️❤️❤️❤️❔❤️❤️❤️❤️❤️❔",
@@ -113,7 +115,7 @@ class RainingHearts: Program {
     )
 
     let xLargeHeart = Shape(
-        offset: Vector(dx: 8, dy: 6).intView,
+        offset: IntVector(dx: 8, dy: 6),
         rows: [
             "❔❔❔❤️❤️❤️❤️❔❔❔❤️❤️❤️❤️❔❔❔",
             "❔❔❤️❤️❤️❤️❤️❤️❔❤️❤️❤️❤️❤️❤️❔❔",

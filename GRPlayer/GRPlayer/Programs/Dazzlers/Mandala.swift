@@ -13,7 +13,7 @@ class Mandala: Program {
     override func update() {
         i += 1
 
-        if i == canvas.bounds.intView.maxX {
+        if i == canvas.bounds.maxX {
             i = 0
         }
 
@@ -21,7 +21,7 @@ class Mandala: Program {
     }
 
     override func draw() {
-        let bounds = canvas.bounds.intView
+        let bounds = canvas.bounds
         canvas.drawHorizontalLine(in: bounds.rangeX, at: i, color: color)
         canvas.drawHorizontalLine(in: bounds.rangeX, at: bounds.maxY - i, color: color)
         canvas.drawVerticalLine(in: bounds.rangeY, at: i, color: color)

@@ -2,11 +2,11 @@ import GR
 
 class Stix: Program {
     override func setup() {
-        canvasSize = Size(width: 1920 / 4, height: 1080 / 4)
+        canvasSize = [1920 / 4, 1080 / 4]
     }
 
     override func draw() {
-        let bounds = canvas.bounds
+        let bounds = Rect(canvas.bounds)
         for _ in 1...50 {
             let p1 = bounds.randomPoint()
             let p2 = bounds.randomPoint()

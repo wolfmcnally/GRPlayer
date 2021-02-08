@@ -1,10 +1,10 @@
 import GR
 
 class Chessboard: Program {
-    let boardSize = Size(width: 8, height: 8)
-    let tileSize = Size(width: 12, height: 12)
+    let boardSize = IntSize(width: 8, height: 8)
+    let tileSize = IntSize(width: 12, height: 12)
 
-    lazy var bounds = boardSize.bounds.intView
+    lazy var bounds = boardSize.bounds
 
     lazy var squaresLayer = Board<SquareTileValue>(size: boardSize, tileSize: tileSize)
     lazy var piecesLayer = Board<PieceTileValue>(size: boardSize, tileSize: tileSize)
@@ -14,7 +14,7 @@ class Chessboard: Program {
 
         for y in bounds.rangeY {
             for x in bounds.rangeX {
-                let point = Point(x: x, y: y).intView
+                let point = IntPoint(x: x, y: y)
 
                 let squareValue = SquareTileValue(x: x, y: y)
                 squaresLayer[point] = squareValue
@@ -76,7 +76,7 @@ class Chessboard: Program {
             return shape
         }
 
-        static func startingColorAtPoint(_ point: Point.IntView) -> PieceColor {
+        static func startingColorAtPoint(_ point: IntPoint) -> PieceColor {
             switch point.y {
             case 0 ... 3:
                 return .black
@@ -87,7 +87,7 @@ class Chessboard: Program {
             }
         }
 
-        static func startingPieceAtPoint(_ point: Point.IntView) -> Piece? {
+        static func startingPieceAtPoint(_ point: IntPoint) -> Piece? {
             switch (point.x, point.y) {
             case (_, 2 ... 5):
                 return nil
@@ -108,7 +108,7 @@ class Chessboard: Program {
             }
         }
 
-        static func startingValueAtPoint(_ point: Point.IntView) -> PieceTileValue? {
+        static func startingValueAtPoint(_ point: IntPoint) -> PieceTileValue? {
             guard let piece = startingPieceAtPoint(point) else { return nil }
             let color = startingColorAtPoint(point)
             return PieceTileValue(piece: piece, pieceColor: color)
@@ -267,5 +267,4 @@ class Chessboard: Program {
             ]
         )
     }
-
 }

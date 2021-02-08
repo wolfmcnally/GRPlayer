@@ -10,16 +10,16 @@ class TheDrip: Program {
 
     private struct Drip {
         let backgroundCanvas: Canvas
-        var position: Point = .zero
-        var direction = Vector(dx: 0, dy: 1)
+        var position: IntPoint = .zero
+        var direction = IntVector(dx: 0, dy: 1)
         var frameCount = 0
 
-        init(backgroundCanvas: Canvas, position: Point) {
+        init(backgroundCanvas: Canvas, position: IntPoint) {
             self.backgroundCanvas = backgroundCanvas
             self.position = position
         }
 
-        func isEmpty(at offset: Vector) -> Bool {
+        func isEmpty(at offset: IntVector) -> Bool {
             let pos = position + offset
             guard backgroundCanvas.bounds.isValidPoint(pos) else { return false }
             return backgroundCanvas[pos] == .black
@@ -140,13 +140,13 @@ class TheDrip: Program {
 
     private func drawBasin() {
         let bounds = backgroundCanvas.bounds
-        backgroundCanvas.drawVerticalLine(in: bounds.minY ..< bounds.maxY, at: bounds.minX, color: basinColor)
-        backgroundCanvas.drawVerticalLine(in: bounds.minY ..< bounds.maxY, at: bounds.maxX - 1, color: basinColor)
-        backgroundCanvas.drawHorizontalLine(in: bounds.minX ..< bounds.maxX, at: bounds.maxX - 1, color: basinColor)
+        backgroundCanvas.drawVerticalLine(in: bounds.minY ... bounds.maxY, at: bounds.minX, color: basinColor)
+        backgroundCanvas.drawVerticalLine(in: bounds.minY ... bounds.maxY, at: bounds.maxX, color: basinColor)
+        backgroundCanvas.drawHorizontalLine(in: bounds.minX ... bounds.maxX, at: bounds.maxX, color: basinColor)
     }
 
     private func drawObstacles() {
-        let bounds = backgroundCanvas.bounds.intView
+        let bounds = backgroundCanvas.bounds
 
         for y in bounds.minY + 5 ... bounds.maxY - 1 {
             for x in bounds.minX + 1 ... bounds.maxX - 1 {
@@ -158,7 +158,7 @@ class TheDrip: Program {
     }
 
     private func randomStartPosition() -> Point? {
-        let bounds = canvas.bounds.intView
+        let bounds = canvas.bounds
 
         var startPositions = [Point]()
         for x in bounds.rangeX {
@@ -174,9 +174,9 @@ class TheDrip: Program {
         return startPositions[0]
     }
 
-    private func centerStartPosition() -> Point? {
-        let bounds = canvas.bounds.intView
-        let startPosition = Point(x: bounds.midX, y: bounds.minY)
+    private func centerStartPosition() -> IntPoint? {
+        let bounds = canvas.bounds
+        let startPosition = IntPoint(x: bounds.midX, y: bounds.minY)
         guard backgroundCanvas[startPosition] == .black else { return nil }
         return startPosition
     }

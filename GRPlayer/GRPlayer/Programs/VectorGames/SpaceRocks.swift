@@ -1,20 +1,20 @@
 import GR
 
 class SpaceRocks : Program {
-    let player = Player()
-    let saucer = Saucer()
-    var rocks: [Rock] = []
+    private let player = Player()
+    private let saucer = Saucer()
+    private var rocks: [Rock] = []
 
     override func setup() {
         canvasSize = [1280, 960]
         backgroundCanvas.clearColor = .black
         framesPerSecond = 30
 
-        player.position = canvas.bounds.midXmidY
+        player.position = Rect(canvas.bounds).midXmidY
         saucer.position = [50, 50]
 
         for _ in 0..<20 {
-            let position = canvas.bounds.randomPoint()
+            let position = Rect(canvas.bounds).randomPoint()
             let rotation = Angle.random()
             let index = Int.random(in: 0..<4)
             let heft = Rock.Heft.allCases.randomChoice()
@@ -46,13 +46,13 @@ class SpaceRocks : Program {
     }
 }
 
-struct PathShape {
+fileprivate struct PathShape {
     var path: Path
     var color: Color
     var lineWidth: Double = 1
 }
 
-class Sprite {
+fileprivate class Sprite {
     var position: Point
     var speed: Vector
     let pathShapes: [PathShape]
@@ -69,7 +69,7 @@ class Sprite {
 
     func update(in canvas: Canvas) {
         position += speed
-        let bounds = canvas.bounds
+        let bounds = Rect(canvas.bounds)
         position.x = (position.x + bounds.width).truncatingRemainder(dividingBy: bounds.width)
         position.y = (position.y + bounds.height).truncatingRemainder(dividingBy: bounds.height)
     }
@@ -82,7 +82,7 @@ class Sprite {
     }
 }
 
-class Rock: Sprite {
+fileprivate class Rock: Sprite {
     let heft: Heft
 
     enum Heft: CaseIterable {
@@ -143,7 +143,7 @@ class Rock: Sprite {
     ]
 }
 
-class Saucer: Sprite {
+fileprivate class Saucer: Sprite {
     init(position: Point = .zero) {
         let shape = PathShape(path: Self.saucer, color: .green)
         super.init(position: position, speed: [4, 0], rotation: .zero, scale: 0.5, pathShapes: [shape])
@@ -157,7 +157,7 @@ class Saucer: Sprite {
     ]
 }
 
-class Player: Sprite {
+fileprivate class Player: Sprite {
     init(position: Point = .zero, rotation: Angle = .zero) {
         let pathShapes: [PathShape] = [
             .init(path: Self.player, color: .white),

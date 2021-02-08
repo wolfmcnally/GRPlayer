@@ -4,7 +4,7 @@ class HelloCorners: Program {
     override class var subtitle: String? { "Reaching the Limits" }
 
     override func draw()  {
-        let bounds = canvas.bounds.intView
+        let bounds = canvas.bounds
 
         for x in bounds.minX ... bounds.maxX {
             let y = x

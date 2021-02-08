@@ -5,7 +5,7 @@ class HelloTurtle : Program {
     var startAngle: Angle = .zero
 
     override func setup() {
-        canvasSize = .init(width: 1920, height: 1080)
+        canvasSize = [1920, 1080]
         framesPerSecond = 30
         self.turtle = Turtle(canvas: canvas)
     }
@@ -42,7 +42,7 @@ final class Turtle {
 
     init(canvas: Canvas, angle: Angle = .zero) {
         self.canvas = canvas
-        self.position = canvas.bounds.midXmidY.snapped
+        self.position = Rect(canvas.bounds).midXmidY
         self.angle = angle
     }
 

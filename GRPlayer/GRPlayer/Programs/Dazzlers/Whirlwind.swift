@@ -17,9 +17,9 @@ class Whirlwind: Program {
 
     override func setup() {
         framesPerSecond = 60
-        canvasSize = Size(width: 300, height: 300)
+        canvasSize = [300, 300]
         backgroundCanvas.clearColor = .black
-        center = canvas.bounds.midXmidY
+        center = Point(canvas.bounds.midXmidY)
         for _ in 0 ..< particlesCount {
             particles.append(makeParticle())
         }
@@ -38,11 +38,11 @@ class Whirlwind: Program {
     }
 
     override func draw() {
-        let bounds = canvas.bounds.intView
+        let bounds = canvas.bounds
         for p in particles {
             let x = Int(p.center.x + cos(p.angle) * p.radius + 0.5)
             let y = Int(p.center.y + sin(p.angle) * p.radius + 0.5)
-            let point = Point(x: x, y: y)
+            let point = IntPoint(x: x, y: y)
             guard bounds.isValidPoint(point) else { continue }
             canvas[point] = p.color
         }
@@ -51,7 +51,7 @@ class Whirlwind: Program {
     private func makeParticle() -> Particle {
         var p = Particle()
 
-        p.center = canvas.bounds.midXmidY
+        p.center = Point(canvas.bounds.midXmidY)
 
         let minRadius = Double(canvas.bounds.maxX) / 15
         let r = Double(canvas.bounds.midY)

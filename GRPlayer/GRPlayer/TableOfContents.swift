@@ -43,51 +43,53 @@ struct ContentsItem: Identifiable {
 
 let contents: [ContentsItem] = [
     .init("Getting Started", [
-            .init(EmptyProgram.self),
-            .init(HelloPixel.self),
-            .init(HelloCorners.self),
-            .init(DotsAndLines.self),
-            .init(Rectangles.self),
+        .init(EmptyProgram.self),
+        .init(HelloPixel.self),
+        .init(HelloCorners.self),
+        .init(DotsAndLines.self),
+        .init(Rectangles.self),
     ]),
     .init("Understanding Coordinates"),
     .init("Understanding Color"),
     .init("Basic Animation", [
-            .init(Pebbles.self),
-            .init(Gravel.self),
-            .init(HelloMovement.self),
-            .init(BouncingBalls.self),
+        .init(Pebbles.self),
+        .init(Gravel.self),
+        .init(HelloMovement.self),
+        .init(RandomWalk.self),
+        .init(BouncingBalls.self),
     ]),
     .init("Shapes and Sprites", [
-            .init(Mushrooms.self),
-            .init(RainingHearts.self),
+        .init(Mushrooms.self),
+        .init(RainingHearts.self),
     ]),
     .init("User Interaction", [
-            .init(HelloPlayer.self),
+        .init(HelloPlayer.self),
     ]),
     .init("Grids", [
-            .init(Chessboard.self),
+        .init(Chessboard.self),
     ]),
     .init("Toys", [
-            .init(TheDrip.self),
-            .init(Sparkler.self),
+        .init(Sparkler.self),
     ]),
     .init("Sound Effects"),
     .init("Dazzlers", [
-            .init(Mandala.self),
-            .init(Whirlwind.self),
+        .init(Mandala.self),
+        .init(TheDrip.self),
+        .init(DrawMaze.self),
+        .init(Whirlwind.self),
     ]),
     .init("Vector Graphics", [
-            .init(HelloVector.self),
-            .init(HelloPath.self),
-            .init(Stix.self),
-            .init(MoreStix.self),
-            .init(DancingLines.self),
+        .init(HelloVector.self),
+        .init(HelloPath.self),
+        .init(Stix.self),
+        .init(MoreStix.self),
+        .init(DancingLines.self),
     ]),
     .init("Turtle Graphics", [
-            .init(HelloTurtle.self),
+        .init(HelloTurtle.self),
     ]),
     .init("Vector Games", [
-            .init(SpaceRocks.self),
+        .init(SpaceRocks.self),
     ]),
 ]
 

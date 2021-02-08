@@ -8,7 +8,7 @@
 import GR
 
 class HelloPlayer: Program {
-    var playerPosition = Point.zero
+    var playerPosition = IntPoint.zero
 
     override func setup() {
         playerPosition = canvas.bounds.midXmidY
@@ -19,17 +19,17 @@ class HelloPlayer: Program {
     }
     
     override func onEvent(event: Event) {
-        var move = Vector()
+        var move = IntVector()
         switch event {
         case .move(let direction):
-            move = direction.offset
+            move = direction.intOffset
         default:
             break
         }
         
         if move != .zero {
             let newPosition = playerPosition + move
-            if canvas.bounds.intView.isValidPoint(newPosition) {
+            if canvas.bounds.isValidPoint(newPosition) {
                 playerPosition += move
                 display()
             }
