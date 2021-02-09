@@ -17,7 +17,7 @@ class HelloTurtle : Program {
     override func draw()  {
         let steps = 36
         let angleStep = 360° / Double(steps)
-        let hueStep = 1 / Double(steps)
+        let hueStep = 360° / Double(steps)
         let sides = 30
         let sideStep = 360° / Double(sides)
         turtle.angle = startAngle

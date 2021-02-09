@@ -10,7 +10,7 @@ import GR
 
 struct ContentView: View {
     var body: some View {
-//        ProgramView(DrawMaze())
+//        ProgramView(HSBColorMixer())
         NavigationView {
             ContentsMenu()
         }

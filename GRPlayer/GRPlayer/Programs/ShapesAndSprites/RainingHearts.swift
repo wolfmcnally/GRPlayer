@@ -27,18 +27,18 @@ class RainingHearts: Program {
             let minBrightness = 0.5
             let maxBrightness = 1.0
             let brightness = Double(index).interpolate(from: (0, Double(allShapes.count) - 1), to: (minBrightness, maxBrightness))
-            let hue: Double
+            let hue: Angle
             let colorPicker = Double.randomFrac()
             switch colorPicker {
             case ..<0.48:
                 // shade of purple-red heart
-                hue = Double.random(in: (290.0 / 360.0) ... (310.0 / 360.0))
+                hue = Angle.random(in: 290.0° ... 310.0°)
             case ..<0.96:
                 // shade of blue heart
-                hue = Double.random(in: 0.56 ... 0.58)
+                hue = Angle.random(in: 201° ... 209°)
             default:
                 // pure red heart
-                hue = 0
+                hue = 0°
             }
             let color = Color(HSBColor(hue: hue, saturation: saturation, brightness: brightness))
             sprite.shape.colors["❤️"] = color

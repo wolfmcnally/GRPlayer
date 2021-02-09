@@ -98,7 +98,7 @@ class TheDrip: Program {
                         drip.direction = .right
                         // else we know the drip cannot move at all
                     } else {
-                        canMove = false;
+                        canMove = false
                     }
                 // else we're "checking right first"
                 case false:
@@ -112,7 +112,7 @@ class TheDrip: Program {
                         drip.direction = .left
                         // else we know the drip cannot move at all
                     } else {
-                        canMove = false;
+                        canMove = false
                     }
                 }
 
@@ -122,7 +122,7 @@ class TheDrip: Program {
                 // direction we moved in last frame
                 if !drip.isEmpty(at: drip.direction)  {
                     // we're done moving
-                    canMove = false;
+                    canMove = false
                 }
             }
         }

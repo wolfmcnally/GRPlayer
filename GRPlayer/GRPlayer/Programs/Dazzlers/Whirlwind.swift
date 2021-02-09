@@ -73,12 +73,12 @@ class Whirlwind: Program {
 
         let baseHue = 0°
         let hueOffset = 40°
-        let hue: Frac
+        let hue: Angle
         switch Bool.random() {
         case false:
-            hue = baseHue / 360°
+            hue = baseHue
         case true:
-            hue = (baseHue + hueOffset) / 360°
+            hue = baseHue + hueOffset
         }
         let saturation = Double.random(in: 0.8 ... 1.0)
         let minBrightness = 0.2

@@ -14,6 +14,6 @@ class HelloPath : Program {
             .close
         ]
 
-        canvas.draw(path: path, color: .red)
+        canvas.stroke(path: path, color: .red)
     }
 }

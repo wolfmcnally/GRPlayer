@@ -12,6 +12,8 @@
 		03A9A33F2560E83700FC3E17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A33E2560E83700FC3E17 /* ContentView.swift */; };
 		03A9A3412560E83800FC3E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A9A3402560E83800FC3E17 /* Assets.xcassets */; };
 		03A9A3442560E83800FC3E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A9A3432560E83800FC3E17 /* Preview Assets.xcassets */; };
+		7927087325D219E1000E9FFE /* CMYColorMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927087225D219E1000E9FFE /* CMYColorMixer.swift */; };
+		7927087725D2396B000E9FFE /* HSBColorMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927087625D2396B000E9FFE /* HSBColorMixer.swift */; };
 		793FAB3A25D09FEA000642BE /* RandomWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793FAB3925D09FEA000642BE /* RandomWalk.swift */; };
 		793FAB4025D0EA91000642BE /* DrawMaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793FAB3C25D0AAD9000642BE /* DrawMaze.swift */; };
 		7972C21C25C39316009F9C20 /* TableOfContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972C21B25C39316009F9C20 /* TableOfContents.swift */; };
@@ -42,6 +44,7 @@
 		7972C27125C3E50D009F9C20 /* DancingLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDFB6F2574C0E400F13953 /* DancingLines.swift */; };
 		7972C28A25C3FB7B009F9C20 /* ProgramHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */; };
 		79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */; };
+		79F8446725D1C084005073BC /* RGBColorMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8446625D1C084005073BC /* RGBColorMixer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,8 @@
 		03FDFB6B2574BAAF00F13953 /* Stix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stix.swift; sourceTree = "<group>"; };
 		03FDFB6D2574BF1500F13953 /* MoreStix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStix.swift; sourceTree = "<group>"; };
 		03FDFB6F2574C0E400F13953 /* DancingLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DancingLines.swift; sourceTree = "<group>"; };
+		7927087225D219E1000E9FFE /* CMYColorMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMYColorMixer.swift; sourceTree = "<group>"; };
+		7927087625D2396B000E9FFE /* HSBColorMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBColorMixer.swift; sourceTree = "<group>"; };
 		793FAB3925D09FEA000642BE /* RandomWalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWalk.swift; sourceTree = "<group>"; };
 		793FAB3C25D0AAD9000642BE /* DrawMaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMaze.swift; sourceTree = "<group>"; };
 		7972C21B25C39316009F9C20 /* TableOfContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContents.swift; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 		7972C24025C3DBB5009F9C20 /* ContentsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsMenu.swift; sourceTree = "<group>"; };
 		7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramHeader.swift; sourceTree = "<group>"; };
 		79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloPlayer.swift; sourceTree = "<group>"; };
+		79F8446625D1C084005073BC /* RGBColorMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorMixer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				7972C27A25C3EC72009F9C20 /* GettingStarted */,
+				79F8446525D1C068005073BC /* UnderstandingColor */,
 				7972C27C25C3ECA2009F9C20 /* BasicAnimation */,
 				7972C27D25C3ECB5009F9C20 /* ShapesAndSprites */,
 				79BAE6D925CA0EFC0048C6CA /* Interaction */,
@@ -263,6 +270,16 @@
 			path = Interaction;
 			sourceTree = "<group>";
 		};
+		79F8446525D1C068005073BC /* UnderstandingColor */ = {
+			isa = PBXGroup;
+			children = (
+				79F8446625D1C084005073BC /* RGBColorMixer.swift */,
+				7927087225D219E1000E9FFE /* CMYColorMixer.swift */,
+				7927087625D2396B000E9FFE /* HSBColorMixer.swift */,
+			);
+			path = UnderstandingColor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,10 +356,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7972C26D25C3E50D009F9C20 /* HelloTurtle.swift in Sources */,
+				7927087725D2396B000E9FFE /* HSBColorMixer.swift in Sources */,
 				7972C25B25C3E50D009F9C20 /* Gravel.swift in Sources */,
 				7972C26E25C3E50D009F9C20 /* HelloPixel.swift in Sources */,
+				7927087325D219E1000E9FFE /* CMYColorMixer.swift in Sources */,
 				7972C26025C3E50D009F9C20 /* EmptyProgram.swift in Sources */,
 				793FAB4025D0EA91000642BE /* DrawMaze.swift in Sources */,
+				79F8446725D1C084005073BC /* RGBColorMixer.swift in Sources */,
 				7972C27025C3E50D009F9C20 /* DotsAndLines.swift in Sources */,
 				79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */,
 				7972C26825C3E50D009F9C20 /* Whirlwind.swift in Sources */,

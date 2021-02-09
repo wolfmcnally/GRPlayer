@@ -4,14 +4,14 @@ import Interpolate
 class Sparkler: Program {
     let numSparks = 400
     let gravity = 0.05
-    var frame = 0;
+    var frame = 0
     var genPosition = IntPoint.zero
-    var genHue: Frac = 0
+    var genHue: Angle = 0°
 
     struct Spark {
         var position: Point
         var direction: Vector
-        var hue: Frac
+        var hue: Angle
         var saturation: Frac
         let bornFrame: Int
         let dieFrame: Int
@@ -69,7 +69,7 @@ class Sparkler: Program {
         switch event {
         case .touchBegan(let point):
             genPosition = canvas.bounds.clampPoint(IntPoint(point))
-            genHue = Double.randomFrac()
+            genHue = Angle.random()
         case .touchMoved(let point):
             genPosition = canvas.bounds.clampPoint(IntPoint(point))
         default:
@@ -87,18 +87,18 @@ class Sparkler: Program {
         let speed = Double.random(in: 0.5 ... 2.0)
         let direction = Vector(angle: angle, magnitude: speed)
 
-        let hue: Frac
+        let hue: Angle
         let saturation: Frac
         switch Int.random(in: 0 ... 2) {
         case 0:
-            hue = genHue + 200.0 / 360.0
+            hue = genHue + 10°
             saturation = 1
         case 1:
-            hue = 0
+            hue = 0°
             saturation = 0
         case 2:
-            hue = genHue + 180.0 / 360.0
-            saturation = 0.8
+            hue = genHue - 10°
+            saturation = 1
         default:
             fatalError()
         }

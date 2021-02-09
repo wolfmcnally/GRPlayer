@@ -50,7 +50,11 @@ let contents: [ContentsItem] = [
         .init(Rectangles.self),
     ]),
     .init("Understanding Coordinates"),
-    .init("Understanding Color"),
+    .init("Understanding Color", [
+        .init(RGBColorMixer.self),
+        .init(CMYColorMixer.self),
+        .init(HSBColorMixer.self),
+    ]),
     .init("Basic Animation", [
         .init(Pebbles.self),
         .init(Gravel.self),

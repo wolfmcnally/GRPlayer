@@ -77,7 +77,7 @@ fileprivate class Sprite {
     func draw(in canvas: Canvas) {
         for shape in pathShapes {
             let p = shape.path.scaled(by: scale).rotated(by: rotation).translated(by: position)
-            canvas.draw(path: p, color: shape.color, lineWidth: shape.lineWidth)
+            canvas.stroke(path: p, color: shape.color, lineWidth: shape.lineWidth)
         }
     }
 }
