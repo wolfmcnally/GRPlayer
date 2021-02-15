@@ -43,6 +43,8 @@
 		7972C27025C3E50D009F9C20 /* DotsAndLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A9A3D425612B7B00FC3E17 /* DotsAndLines.swift */; };
 		7972C27125C3E50D009F9C20 /* DancingLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDFB6F2574C0E400F13953 /* DancingLines.swift */; };
 		7972C28A25C3FB7B009F9C20 /* ProgramHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */; };
+		79749F8025DB3EB400908425 /* OneProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79749F7F25DB3EB400908425 /* OneProgram.swift */; };
+		79749F8325DB3EE000908425 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79749F8225DB3EE000908425 /* MainMenu.swift */; };
 		79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */; };
 		79F8446725D1C084005073BC /* RGBColorMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8446625D1C084005073BC /* RGBColorMixer.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,8 @@
 		7972C22625C398AB009F9C20 /* ProgramInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramInfo.swift; sourceTree = "<group>"; };
 		7972C24025C3DBB5009F9C20 /* ContentsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsMenu.swift; sourceTree = "<group>"; };
 		7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramHeader.swift; sourceTree = "<group>"; };
+		79749F7F25DB3EB400908425 /* OneProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneProgram.swift; sourceTree = "<group>"; };
+		79749F8225DB3EE000908425 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloPlayer.swift; sourceTree = "<group>"; };
 		79F8446625D1C084005073BC /* RGBColorMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorMixer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,8 +128,10 @@
 		03A9A33B2560E83700FC3E17 /* GRPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				03A9A33C2560E83700FC3E17 /* GRPlayerApp.swift */,
+				79749F7F25DB3EB400908425 /* OneProgram.swift */,
 				03A9A33E2560E83700FC3E17 /* ContentView.swift */,
+				79749F8225DB3EE000908425 /* MainMenu.swift */,
+				03A9A33C2560E83700FC3E17 /* GRPlayerApp.swift */,
 				7972C21B25C39316009F9C20 /* TableOfContents.swift */,
 				7972C24025C3DBB5009F9C20 /* ContentsMenu.swift */,
 				7972C22625C398AB009F9C20 /* ProgramInfo.swift */,
@@ -372,12 +378,14 @@
 				7972C22725C398AB009F9C20 /* ProgramInfo.swift in Sources */,
 				7972C28A25C3FB7B009F9C20 /* ProgramHeader.swift in Sources */,
 				7972C25E25C3E50D009F9C20 /* SpaceRocks.swift in Sources */,
+				79749F8025DB3EB400908425 /* OneProgram.swift in Sources */,
 				7972C25F25C3E50D009F9C20 /* TheDrip.swift in Sources */,
 				7972C26425C3E50D009F9C20 /* Pebbles.swift in Sources */,
 				7972C26B25C3E50D009F9C20 /* HelloMovement.swift in Sources */,
 				7972C26F25C3E50D009F9C20 /* Rectangles.swift in Sources */,
 				7972C26C25C3E50D009F9C20 /* MoreStix.swift in Sources */,
 				7972C26625C3E50D009F9C20 /* Stix.swift in Sources */,
+				79749F8325DB3EE000908425 /* MainMenu.swift in Sources */,
 				7972C26925C3E50D009F9C20 /* Mandala.swift in Sources */,
 				7972C25C25C3E50D009F9C20 /* Mushrooms.swift in Sources */,
 				7972C24125C3DBB5009F9C20 /* ContentsMenu.swift in Sources */,

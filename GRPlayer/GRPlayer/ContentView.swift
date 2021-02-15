@@ -10,11 +10,8 @@ import GR
 
 struct ContentView: View {
     var body: some View {
-//        ProgramView(HSBColorMixer())
-        NavigationView {
-            ContentsMenu()
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+        OneProgram()
+//        MainMenu()
     }
 }
 
