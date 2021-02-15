@@ -4,7 +4,4 @@
    <FileRef
       location = "group:GRPlayer/GRPlayer.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../GR">
-   </FileRef>
 </Workspace>

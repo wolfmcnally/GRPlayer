@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "GR",
+        "repositoryURL": "https://github.com/wolfmcnally/GR.git",
+        "state": {
+          "branch": null,
+          "revision": "4cee90f7b945ce85f5bbefbe56464cd254e6a31d",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "Interpolate",
         "repositoryURL": "https://github.com/wolfmcnally/Interpolate.git",
         "state": {
