@@ -8,7 +8,7 @@
 import SwiftUI
 import GR
 
-let mainProgram = EmptyProgram()
+let mainProgram = MyProgram()
 
 struct OneProgram: View {
     var body: some View {

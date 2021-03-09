@@ -46,6 +46,8 @@
 		79749F8025DB3EB400908425 /* OneProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79749F7F25DB3EB400908425 /* OneProgram.swift */; };
 		79749F8325DB3EE000908425 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79749F8225DB3EE000908425 /* MainMenu.swift */; };
 		79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */; };
+		79C1696E25DB51860007F25C /* MyRectangles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1696D25DB51860007F25C /* MyRectangles.swift */; };
+		79F0C2A025F6F84800FFB521 /* MyProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0C29F25F6F84800FFB521 /* MyProgram.swift */; };
 		79F8446725D1C084005073BC /* RGBColorMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8446625D1C084005073BC /* RGBColorMixer.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		79749F7F25DB3EB400908425 /* OneProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneProgram.swift; sourceTree = "<group>"; };
 		79749F8225DB3EE000908425 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloPlayer.swift; sourceTree = "<group>"; };
+		79C1696D25DB51860007F25C /* MyRectangles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRectangles.swift; sourceTree = "<group>"; };
+		79F0C29F25F6F84800FFB521 /* MyProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgram.swift; sourceTree = "<group>"; };
 		79F8446625D1C084005073BC /* RGBColorMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorMixer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,8 @@
 		03A9A33B2560E83700FC3E17 /* GRPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				79F0C29F25F6F84800FFB521 /* MyProgram.swift */,
+				79C1696D25DB51860007F25C /* MyRectangles.swift */,
 				79749F7F25DB3EB400908425 /* OneProgram.swift */,
 				03A9A33E2560E83700FC3E17 /* ContentView.swift */,
 				79749F8225DB3EE000908425 /* MainMenu.swift */,
@@ -371,6 +377,7 @@
 				79F8446725D1C084005073BC /* RGBColorMixer.swift in Sources */,
 				7972C27025C3E50D009F9C20 /* DotsAndLines.swift in Sources */,
 				79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */,
+				79F0C2A025F6F84800FFB521 /* MyProgram.swift in Sources */,
 				7972C26825C3E50D009F9C20 /* Whirlwind.swift in Sources */,
 				7972C26A25C3E50D009F9C20 /* HelloVector.swift in Sources */,
 				7972C25D25C3E50D009F9C20 /* Chessboard.swift in Sources */,
@@ -389,6 +396,7 @@
 				7972C26925C3E50D009F9C20 /* Mandala.swift in Sources */,
 				7972C25C25C3E50D009F9C20 /* Mushrooms.swift in Sources */,
 				7972C24125C3DBB5009F9C20 /* ContentsMenu.swift in Sources */,
+				79C1696E25DB51860007F25C /* MyRectangles.swift in Sources */,
 				03A9A33F2560E83700FC3E17 /* ContentView.swift in Sources */,
 				7972C21C25C39316009F9C20 /* TableOfContents.swift in Sources */,
 				03A9A33D2560E83700FC3E17 /* GRPlayerApp.swift in Sources */,
