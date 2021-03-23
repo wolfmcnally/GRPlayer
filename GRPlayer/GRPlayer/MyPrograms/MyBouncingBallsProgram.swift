@@ -61,14 +61,14 @@ struct Ball {
     }
 }
 
-class MyProgram: Program {
+class MyBouncingBallsProgram: Program {
     var balls: [Ball] = []
     
     override func setup() {
         framesPerSecond = 30
-        canvasSize = [55, 40]
+        canvasSize = [200, 200]
 
-        for _ in 0..<20 {
+        for _ in 0..<1000 {
             let ball = Ball(
                 x: canvas.bounds.randomX(),
                 y: canvas.bounds.randomY(),

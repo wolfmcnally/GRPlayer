@@ -11,14 +11,14 @@ class HSBColorMixer: Program {
     override func setup() {
         canvasSize = [200, 300]
         canvas.clearColor = .black
-        
+
         hue = 0°
         saturation = 1
         brightness = 1
-        
+
         let sliderMinY = 210
         let sliderSpacing = 30
-        
+
         let hueSlider = Slider(canvas: canvas, y: sliderMinY, value: hue.unit) { [unowned self] value in
             self.hue = Angle(unit: value)
             self.display()
@@ -29,14 +29,14 @@ class HSBColorMixer: Program {
         let saturationSlider = Slider(canvas: canvas, y: sliderMinY + sliderSpacing, value: saturation) { [unowned self] value in
             self.saturation = value
             self.display()
-        } barColor: { t in
+        } barColor: { [unowned self] t in
             Color(HSBColor(hue: self.hue, saturation: t, brightness: 1))
         }
 
         let brightnessSlider = Slider(canvas: canvas, y: sliderMinY + sliderSpacing * 2, value: brightness) { [unowned self] value in
             self.brightness = value
             self.display()
-        } barColor: { t in
+        } barColor: { [unowned self] t in
             Color(HSBColor(hue: self.hue, saturation: 1, brightness: t))
         }
 
@@ -46,7 +46,7 @@ class HSBColorMixer: Program {
     override func draw() {
         let radius = 80.0
         let center: Point = [100, 120]
-        
+
         for dy in stride(from: -radius, through: radius, by: 1) {
             for dx in stride(from: -radius, through: radius, by: 1) {
                 let v = Vector(dx: dx, dy: dy)
@@ -91,7 +91,7 @@ class HSBColorMixer: Program {
     }
     
     class Slider {
-        let canvas: Canvas
+        unowned let canvas: Canvas
         let y: Int
         let barColor: (Frac) -> Color
         var value: Frac {
