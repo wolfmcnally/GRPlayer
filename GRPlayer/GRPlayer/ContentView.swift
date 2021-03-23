@@ -10,8 +10,8 @@ import GR
 
 struct ContentView: View {
     var body: some View {
-//        OneProgram()
-        MainMenu()
+        OneProgram()
+//        MainMenu()
     }
 }
 

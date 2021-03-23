@@ -8,7 +8,7 @@
 import SwiftUI
 import GR
 
-let mainProgram = MyFirstPlayer()
+let mainProgram = MyRandomWalkers()
 
 struct OneProgram: View {
     var body: some View {
