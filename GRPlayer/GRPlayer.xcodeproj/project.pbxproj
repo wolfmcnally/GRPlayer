@@ -50,6 +50,8 @@
 		7972C27125C3E50D009F9C20 /* DancingLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDFB6F2574C0E400F13953 /* DancingLines.swift */; };
 		7972C28A25C3FB7B009F9C20 /* ProgramHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */; };
 		79749F8325DB3EE000908425 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79749F8225DB3EE000908425 /* MainMenu.swift */; };
+		799D053126125FE3009C3840 /* BrickOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799D053026125FE3009C3840 /* BrickOut.swift */; };
+		79A4BF71261BD053009F5B5F /* MyBrickOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A4BF70261BD053009F5B5F /* MyBrickOut.swift */; };
 		79BAE6DB25CA0F0F0048C6CA /* HelloPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */; };
 		79F8446725D1C084005073BC /* RGBColorMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8446625D1C084005073BC /* RGBColorMixer.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +104,8 @@
 		7972C24025C3DBB5009F9C20 /* ContentsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsMenu.swift; sourceTree = "<group>"; };
 		7972C28925C3FB7B009F9C20 /* ProgramHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramHeader.swift; sourceTree = "<group>"; };
 		79749F8225DB3EE000908425 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		799D053026125FE3009C3840 /* BrickOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickOut.swift; sourceTree = "<group>"; };
+		79A4BF70261BD053009F5B5F /* MyBrickOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBrickOut.swift; sourceTree = "<group>"; };
 		79BAE6DA25CA0F0F0048C6CA /* HelloPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloPlayer.swift; sourceTree = "<group>"; };
 		79F8446625D1C084005073BC /* RGBColorMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorMixer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +179,7 @@
 		03A9A3BE25612A3E00FC3E17 /* Programs */ = {
 			isa = PBXGroup;
 			children = (
+				799D052F26125FC5009C3840 /* Games */,
 				7972C27A25C3EC72009F9C20 /* GettingStarted */,
 				79F8446525D1C068005073BC /* UnderstandingColor */,
 				7972C27C25C3ECA2009F9C20 /* BasicAnimation */,
@@ -199,6 +204,7 @@
 				793492E42609A89F00AC455C /* MyRandomWalkers.swift */,
 				793492D92609A4F600AC455C /* MyFirstPlayer.swift */,
 				793492DA2609A4F600AC455C /* MyBouncingBallsProgram.swift */,
+				79A4BF70261BD053009F5B5F /* MyBrickOut.swift */,
 			);
 			path = MyPrograms;
 			sourceTree = "<group>";
@@ -289,6 +295,14 @@
 				039727F625775667008B9B29 /* SpaceRocks.swift */,
 			);
 			path = VectorGames;
+			sourceTree = "<group>";
+		};
+		799D052F26125FC5009C3840 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				799D053026125FE3009C3840 /* BrickOut.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 		79BAE6D925CA0EFC0048C6CA /* Interaction */ = {
@@ -409,6 +423,7 @@
 				7972C25F25C3E50D009F9C20 /* TheDrip.swift in Sources */,
 				7972C26425C3E50D009F9C20 /* Pebbles.swift in Sources */,
 				7972C26B25C3E50D009F9C20 /* HelloMovement.swift in Sources */,
+				799D053126125FE3009C3840 /* BrickOut.swift in Sources */,
 				7972C26F25C3E50D009F9C20 /* Rectangles.swift in Sources */,
 				7972C26C25C3E50D009F9C20 /* MoreStix.swift in Sources */,
 				7972C26625C3E50D009F9C20 /* Stix.swift in Sources */,
@@ -419,6 +434,7 @@
 				793492DC2609A4F600AC455C /* MyRectangles.swift in Sources */,
 				03A9A33F2560E83700FC3E17 /* ContentView.swift in Sources */,
 				7972C21C25C39316009F9C20 /* TableOfContents.swift in Sources */,
+				79A4BF71261BD053009F5B5F /* MyBrickOut.swift in Sources */,
 				03A9A33D2560E83700FC3E17 /* GRPlayerApp.swift in Sources */,
 				7972C26525C3E50D009F9C20 /* RainingHearts.swift in Sources */,
 				793FAB3A25D09FEA000642BE /* RandomWalk.swift in Sources */,

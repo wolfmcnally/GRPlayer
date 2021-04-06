@@ -8,7 +8,7 @@
 import SwiftUI
 import GR
 
-let mainProgram = MyRandomWalkers()
+let mainProgram = MyBrickOut()
 
 struct OneProgram: View {
     var body: some View {
